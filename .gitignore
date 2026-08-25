@@ -1,0 +1,17 @@
+# あなた自身の情報は、既定で git に載せません（公開リポジトリへの事故を防ぐため）
+# 自分だけの非公開リポジトリで管理したくなったら、該当行を消してください。
+
+governance/security.md
+brain/glossary.md
+context/
+output/
+sahou/_log/
+setup/_progress.txt
+setup/_done.txt
+.env
+*.key
+*.pem
+
+# CLAUDE.md はあなたの家の設計図です。非公開リポジトリなら載せてよい。
+# 公開リポジトリに置く予定があるなら、次の行の # を外してください。
+# CLAUDE.md

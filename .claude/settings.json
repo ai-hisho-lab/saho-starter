@@ -1,0 +1,87 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell",
+            "args": [
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-File",
+              "setup/onboarding_check.ps1"
+            ],
+            "timeout": 15,
+            "statusMessage": "導入状況を確認中..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell",
+            "args": [
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-File",
+              "setup/hooks/saho_match.ps1"
+            ],
+            "timeout": 10,
+            "statusMessage": "作法を照合中..."
+          },
+          {
+            "type": "command",
+            "command": "powershell",
+            "args": [
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-File",
+              "setup/hooks/people_match.ps1"
+            ],
+            "timeout": 10,
+            "statusMessage": "家の地図を照合中..."
+          },
+          {
+            "type": "command",
+            "command": "powershell",
+            "args": [
+              "-NoProfile",
+              "-ExecutionPolicy",
+              "Bypass",
+              "-File",
+              "setup/hooks/miss_log.ps1"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/.env)",
+      "Read(./**/*_secret*)",
+      "Read(./**/*credential*)",
+      "Read(./**/id_rsa*)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Edit(./.claude/settings.json)",
+      "Edit(~/.claude/**)",
+      "Edit(~/.claude.json)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
