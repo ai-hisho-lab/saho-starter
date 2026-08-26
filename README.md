@@ -1,10 +1,10 @@
-# AI秘書 スターターキット
+﻿# AI秘書 スターターキット
 
 AI秘書講座（AI秘書ラボ）の配布物です。
 
 ## ダウンロード
 
-**→ [AI秘書.zip をダウンロード](https://github.com/ai-hisho-lab/saho-starter/releases/latest/download/AI秘書.zip)**
+**→ [AI秘書.zip をダウンロード](https://github.com/ai-hisho-lab/saho-starter/releases/latest/download/AI-hisho.zip)**
 
 ## 使い方
 
