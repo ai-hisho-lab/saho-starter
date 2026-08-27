@@ -21,7 +21,7 @@ https://github.com/ai-hisho-lab/saho-kit/raw/main/shelf/_add_triggers.tsv
 
 1. 上の 4 つを**順に**ブラウザで開いて、本文を読む
 2. 最初の 3 つを `saho/` に**同じファイル名**で保存する
-3. 4 つ目 `_add_triggers.tsv` の中身のうち、**`#` で始まる行を除いた 4 行**を
+3. 4 つ目 `_add_triggers.tsv` の中身のうち、**`#` で始まる行を除いた 5 行すべて**を
    `saho/_triggers.tsv` の**末尾に追記**する
 
 ## タブに注意（ここが一番壊れる）
@@ -48,7 +48,8 @@ https://github.com/ai-hisho-lab/saho-kit/raw/main/shelf/_add_triggers.tsv
 次の 2 つだけ報告する（それ以外は言わない）。
 
 - 保存した 3 ファイルの名前
-- `saho/_triggers.tsv` の**追記後の行数**（**29 行**になっていれば成功）
+- `saho/_triggers.tsv` の**追記後の行数**
+- **成功の判定は行数ではなく中身**: `saho/_triggers.tsv` に `_sirabete-kara` の行があれば成功
 
 ## 開けなかったとき
 
