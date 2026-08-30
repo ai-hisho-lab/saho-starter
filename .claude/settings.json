@@ -81,7 +81,14 @@
       "Bash(curl:*)",
       "Bash(wget:*)",
       "Bash(rm -rf:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(cat:*)",
+      "Bash(type:*)",
+      "Bash(more:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(Get-Content:*)",
+      "Bash(gc:*)"
     ]
   }
 }
